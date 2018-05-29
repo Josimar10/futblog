@@ -1,4 +1,5 @@
-<%= render 'shared/header' %>
 
 <h1>Aquí puedes contactarte con nosotros</h1>
 <p>Te responderemos lo antes posible</p>
+<% content_for :saludo, "Hola" %>
+<%= yield :saludo %>
