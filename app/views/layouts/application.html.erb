@@ -3,7 +3,7 @@
   <head>
     <title>FutBlog</title>
     <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => false %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -11,6 +11,13 @@
 
   <body>
   <%= render 'shared/header' %>
+  <div class="container">
+    <ul>
+    <% flash.each do |key, value| %>
+    <li><%= value %></li>
+    </ul>
+    <% end %>
     <%= yield %>
+  </div>
   </body>
 </html>
