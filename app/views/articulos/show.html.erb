@@ -4,3 +4,11 @@
 <%= link_to "Editar", edit_articulo_path(@articulo) %>
 <%= link_to "Eliminar", @articulo, :method => :delete, data: {confirm: "¿Seguro que quieres
 eliminar este artículo?"} %>
+<p><%= @articulo.comentarios.count %> Comentarios</p>
+<% @articulo.comentarios.each do |comentario| %><br>
+  <%= comentario.nombre %><br>
+  <%= comentario.texto %>
+<% end %>
+<br>
+<p>Deja tu comentario:</p>
+<%= render 'comentarios/form' %>

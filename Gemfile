@@ -41,6 +41,7 @@ end
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'bootstrap', '~> 4.1.0'
 gem 'jquery-rails'
+gem 'devise', '~> 4.4', '>= 4.4.3'
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
